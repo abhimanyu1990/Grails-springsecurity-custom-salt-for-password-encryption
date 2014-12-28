@@ -60,20 +60,6 @@ class User {
 }
 ```
 
-Step 3 . Create a groovy class CustomSaltSource which will extends ReflectionSaltSource
-```
-package com.abhimanyu.example.auth;
-
-import org.springframework.security.authentication.dao.ReflectionSaltSource;
-import org.springframework.security.core.userdetails.UserDetails;
-
-class CustomSaltSource extends ReflectionSaltSource {
-	Object getSalt(UserDetails user) {
-		user[userPropertyToUse]
-	}
-}
-```
-
 Step 3 . Create a new groovy class CustomUserDetails which will extend GrailsUser . 
 package com.abhimanyu.example.auth
 ```
